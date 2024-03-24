@@ -1,6 +1,9 @@
+import Header from "./Header";
 const Browse = () => {
-    return <>
-        <h1> This is the Browse Page</h1>
-    </>
+    return (
+      <div className="bg-gradient-to-br from-black">
+        <Header />
+      </div>
+    );
 }
 export default Browse;

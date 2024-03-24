@@ -1,27 +1,21 @@
 import Login from "./Login";
 import Browse from "./Browse";
-import image from "../images/backgroundnetflix.jpg";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 const Body = () => {
     const appRouter = createBrowserRouter([
         {
             path: "/",
-            element: <Login/>
+            element: <Login />
         },
         {
             path: "/browse",
-            element: <Browse/>
+            element: <Browse />
         }
-    ])
+    ]);
 
-    return <div
-        style={{ backgroundImage: `url(${image})` }}
-        className="bg-cover bg-center h-screen"
-    >
-        
+
+    return <div>
         <RouterProvider router={appRouter} />
     </div>
 }
 export default Body;
-
-// 
