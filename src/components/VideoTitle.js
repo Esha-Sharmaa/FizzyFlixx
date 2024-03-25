@@ -2,8 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 const VideoTitle = ({ title, overview }) => {
   return (
-    <div className=" absolute top-[10%] px-12 py-20 h-screen flex flex-col justify-center z-10">
-      
+    <div className=" absolute top-[5%] px-12 py-14 h-screen flex flex-col justify-center z-10">
       <h1 className="text-5xl font-bold font-sora text-white">{title}</h1>
       <h3 className="text-sm font-medium  w-2/5 text-justify font-sora py-8 text-white">
         {overview}
