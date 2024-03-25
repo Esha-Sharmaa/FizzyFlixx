@@ -92,7 +92,7 @@ const Login = () => {
       style={{ backgroundImage: `url(${image})` }}
       className="bg-cover bg-center h-screen"
     >
-      <div className="bg-gradient-to-br from-black h-full">
+      <div className="bg-gradient-to-br from-black h-full flex justify-center items-center">
         <Header />
         <div className="w-3/12 bg-black mx-auto p-10 bg-opacity-70 rounded">
           <h2 className="text-white font-medium text-3xl mb-7">

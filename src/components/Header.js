@@ -22,7 +22,7 @@ const Header = () => {
       });
   };
       useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
           if (user) {
             // user is signed in
             const { uid, displayName, email } = user;
@@ -35,18 +35,22 @@ const Header = () => {
             navigate("/");
           }
         });
+        return () => unsubscribe();
+        
       }, []);
   return (
-    <div className="flex justify-between items-center px-14">
-      <img src={logo} alt="logo" className="w-52 block pt-2" />
-      <button
-        onClick={handleSignOut}
-        id="signOutButton"
-        className="text-white bg-red-600 hover:bg-red-700 px-4 py-2 rounded"
-      >
-        Sign Out
-      </button>
-    </div>
+    <header className=" absolute top-0 z-50 w-full">
+      <nav className="flex justify-between items-center px-14">
+        <img src={logo} alt="logo" className="w-52 block " />
+        <button
+          onClick={handleSignOut}
+          id="signOutButton"
+          className="text-white bg-red-600 hover:bg-red-700 px-4 py-2 rounded font-sora"
+        >
+          Sign Out
+        </button>
+      </nav>
+    </header>
   );
 };
 export default Header;
