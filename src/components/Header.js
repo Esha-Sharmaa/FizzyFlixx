@@ -7,7 +7,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser, removeUser } from "../utils/userSlice";
 import { toggleShowGptSearch } from "../utils/gptSlice";
-import { SUPPORTED_LANG } from "../utils/constants";
+import LanguageSelector from "./LanguageSelector";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -48,20 +48,7 @@ const Header = () => {
         <img src={logo} alt="logo" className="w-52 block " />
         {user && (
           <div>
-            <div className="relative inline-block text-left mr-8 ">
-              <select className="appearance-none bg-white border border-gray-400 text-gray-700 px-4 py-2 pr-8 rounded leading-tight focus:outline-none focus:border-blue-500">
-                {SUPPORTED_LANG.map((lang) => <option value={lang.identifier}> {lang.name }</option>)}
-              </select>
-              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                <svg
-                  className="fill-current h-4 w-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 12L4 6h12z" />
-                </svg>
-              </div>
-            </div>
+           {showGptSearch && <LanguageSelector/>}
             <button
               onClick={handleGptSearchToggle}
               className="text-white px-4 py-2 rounded font-sora border border-white mr-8 transition duration-300 ease-in-out hover:bg-white hover:text-black"
