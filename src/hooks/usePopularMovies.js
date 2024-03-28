@@ -1,4 +1,4 @@
-import { API_OPTIONS } from "../utils/keys";
+import { API_OPTIONS } from "../utils/constants";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { addPopularMovies } from "../utils/movieSlice";
@@ -27,6 +27,5 @@ const usePopularMovies = () => {
     popularMovies();
   }, []);
 };
-
 
 export default usePopularMovies;
