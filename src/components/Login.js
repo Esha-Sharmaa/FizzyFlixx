@@ -94,7 +94,7 @@ const Login = () => {
     >
       <div className="bg-gradient-to-br from-black h-full flex justify-center items-center">
         <Header />
-        <div className="w-3/12 bg-black mx-auto p-10 bg-opacity-70 rounded">
+        <div className="w-9/12 md:w-3/12 bg-black mx-auto p-10 bg-opacity-70 rounded">
           <h2 className="text-white font-medium text-3xl mb-7">
             {signIn ? "Sign In" : "Sign Up"}
           </h2>

@@ -1,5 +1,5 @@
 import { IMG_URL } from "../utils/constants";
-const MovieCard = ({ imgID }) => {
+const MovieCard = ({ title, imgID }) => {
   if (!imgID) return;
   return (
     <>
@@ -7,7 +7,7 @@ const MovieCard = ({ imgID }) => {
           src={`${IMG_URL}${imgID}`}
           alt="Movie"
           className="w-52 h-40 object-cover rounded cursor-pointer"
-        />
+      />
     </>
   );
 };

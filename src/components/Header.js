@@ -44,14 +44,14 @@ const Header = () => {
   }, []);
   return (
     <header className=" absolute top-0 z-50 w-full">
-      <nav className="flex justify-between items-center px-14">
+      <nav className="flex flex-col md:flex-row justify-between items-center px-8 md:px-14 ">
         <img src={logo} alt="logo" className="w-52 block " />
         {user && (
           <div>
-           {showGptSearch && <LanguageSelector/>}
+            {showGptSearch && <LanguageSelector />}
             <button
               onClick={handleGptSearchToggle}
-              className="text-white px-4 py-2 rounded font-sora border border-white mr-8 transition duration-300 ease-in-out hover:bg-white hover:text-black"
+              className="text-white px-4 py-2 rounded font-sora border border-white md:mr-8 mr-2 transition duration-300 ease-in-out hover:bg-white hover:text-black"
             >
               {showGptSearch ? "Browse" : "GPT Search"}
             </button>

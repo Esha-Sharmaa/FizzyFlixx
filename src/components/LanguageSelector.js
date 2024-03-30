@@ -8,10 +8,11 @@ const LanguageSelector = () => {
     dispatch(changeLang(e.target.value));
   }
     return (
-      <div className="relative inline-block text-left mr-8 ">
+      <div className="relative inline-block text-left mr-2 md:mr-8 ">
         <select
           onChange={handleLangChange}
-          className="appearance-none bg-white border border-gray-400 text-gray-700 px-4 py-2 pr-8 rounded leading-tight focus:outline-none focus:border-blue-500">
+          className="appearance-none bg-white border border-gray-400 text-gray-700 px-4 py-2 pr-8 rounded leading-tight focus:outline-none focus:border-blue-500"
+        >
           {SUPPORTED_LANG.map((lang) => (
             <option key={lang.identifier} value={lang.identifier}>
               {lang.name}

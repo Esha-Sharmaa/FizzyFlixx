@@ -42,7 +42,7 @@ const GptSearchBar = () => {
   };
 
   return (
-    <div className="flex gap-8 text-white px-8 py-6 rounded-md shadow-lg relative z-10 w-[60%]">
+    <div className="flex gap-8 text-white px-10 md:px-8 py-6 rounded-md shadow-lg relative z-10 w-[100vw] md:w-[60%]">
       <input
         ref={searchText}
         type="text"

@@ -9,11 +9,11 @@ const SecondaryContainer = () => {
       (store) => store.movies.upCommingMovies
     );
     return (
-      <div className="-mt-32 relative z-10">
-        <MovieList title={"Up Comming"} movies={upComming} />
-        <MovieList title={"Now Playing"} movies={nowPlaying} />
-        <MovieList title={"Top Rated"} movies={topRated} />
-        <MovieList title={"Popular"} movies={popular} />
+      <div className="md:-mt-32 relative z-10">
+        <MovieList rowID={1} title={"Up Comming"} movies={upComming} />
+        <MovieList rowID={2} title={"Now Playing"} movies={nowPlaying} />
+        <MovieList rowID={3} title={"Top Rated"} movies={topRated} />
+        <MovieList rowID={4} title={"Popular"} movies={popular} />
       </div>
     );
 }
