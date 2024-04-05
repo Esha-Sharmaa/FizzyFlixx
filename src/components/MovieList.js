@@ -10,7 +10,7 @@ const MovieList = ({rowID, title, movies }) => {
       slider.scrollLeft += 500;
     };
   return (
-    <div className="md:px-12 py-6 relative group">
+    <div className="md:px-12 py-6 relative group w-12/12">
       <h1 className="text-2xl font-bold font-sora text-white pb-8 pl-2">
         {title}
       </h1>
@@ -21,9 +21,20 @@ const MovieList = ({rowID, title, movies }) => {
             size={40}
             onClick={slideLeft}
           />
-          <div className="flex gap-10 overflow-x-scroll scroll-smooth whitespace-nowrap no-scrollbar" id={`slider${rowID}`}>
+          <div
+            className="flex gap-10 overflow-x-scroll scroll-smooth whitespace-nowrap no-scrollbar"
+            id={`slider${rowID}`}
+          >
             {movies.map((movie) => (
-              <MovieCard key={movie.id} title={ movie.title} imgID={movie.backdrop_path} />
+              <MovieCard
+                key={movie.id}
+                id={movie.id}
+                title={movie.title}
+                imgID={movie.backdrop_path}
+                overview={movie.overview}
+                release_date={movie.release_date}
+                poster_path={movie.poster_path}
+              />
             ))}
           </div>
           <MdChevronRight
